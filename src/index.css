@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active{
+    @apply font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-blue-400
+  }
+  
+  .default{
+    @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400
+  }
+
+.btn-start-applying{
+   background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
+   border-radius: 8px;
+}
