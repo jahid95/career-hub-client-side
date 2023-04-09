@@ -1,7 +1,11 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Catagories from '../Catagories/Catagories';
 
 
 const Home = () => {
+    const catagories = useLoaderData();
+    console.log(catagories);
     return (
         <div>
             <div className='flex justify-between mt-10'>
@@ -18,18 +22,16 @@ const Home = () => {
             </div>
 
             {/* job category list */}
-            <div>
-                <div>
-                    <h2>Job Category List</h2>
-                    <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
+            <div className='mt-20'>
+                <div className='my-10'>
+                    <h2 className='text-4xl font-semibold'>Job Category List</h2>
+                    <p className='text-gray-500 my-4'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 </div>
 
-                <div>
-                    <div>
-                        <img src="" alt="" />
-                        <h2>Accounts and Finance</h2>
-                        <p>300 Job Available</p>
-                    </div>
+                <div className='grid grid-cols-4 gap-10'>
+                   {
+                    catagories.map((category, i) => <Catagories key={i} category={category}></Catagories>)
+                   }
                 </div>
 
             </div>
