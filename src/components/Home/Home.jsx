@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Catagories from '../Catagories/Catagories';
+import { JobsContext } from '../../App';
+import Features from '../Features/Features';
 
 
 const Home = () => {
     const catagories = useLoaderData();
+    const jobsData = useContext(JobsContext);
+    const sliceData =jobsData.slice(0,4);
+    const [data, setdata] = useState(sliceData)
     console.log(catagories);
     return (
         <div>
@@ -32,6 +37,17 @@ const Home = () => {
                    {
                     catagories.map((category, i) => <Catagories key={i} category={category}></Catagories>)
                    }
+                </div>
+                <div className='grid grid-cols-2 my-20 text-left'>
+                    {
+                        data.map(feature => <Features feature={feature} key={feature.id}></Features>)
+                    }
+                    
+                </div>
+                <div className={`text-center ${data.length > 4 ? 'hidden' : 'block'}`}>
+                <button onClick={()=> setdata(jobsData)} className='btn-start-applying'>
+                        Load More
+                    </button>
                 </div>
 
             </div>
