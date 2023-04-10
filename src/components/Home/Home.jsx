@@ -15,9 +15,9 @@ const Home = () => {
         <div>
             <div className='flex justify-between mt-10'>
                 <div className='text-left'>
-                    <h1 className='text-5xl text-left font-semibold'>One Step <br /> Closer To Your <br /> <span className='text-blue-600'>Dream Job</span></h1>
-                    <p className='w-80 my-4'>Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
-                    <button className='btn-start-applying'>
+                    <h1 className='text-5xl text-left font-bold my-4 mt-8'>One Step <br /> Closer To Your <br /> <span className='text-blue-600'>Dream Job</span></h1>
+                    <p className='w-96 my-6'>Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
+                    <button className='btn-start-applying my-4'>
                         Get Started
                     </button>
                 </div>
@@ -29,7 +29,7 @@ const Home = () => {
             {/* job category list */}
             <div className='mt-20'>
                 <div className='my-10'>
-                    <h2 className='text-4xl font-semibold'>Job Category List</h2>
+                    <h2 className='text-4xl font-bold'>Job Category List</h2>
                     <p className='text-gray-500 my-4'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 </div>
 

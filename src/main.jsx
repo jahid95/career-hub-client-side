@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         element:<Statistics></Statistics>
       },
       {
-        path: "statistics/:jobId",
+        path: "/:jobId",
         element: <JobDetails></JobDetails>,
         loader: ({params}) =>dynamicLoadData(`${params.jobId}`)
       }
