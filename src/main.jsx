@@ -10,6 +10,7 @@ import Home from './components/Home/Home'
 import Statistics from './components/Statistics/Statistics'
 import { dynamicLoadData } from './utilities/DynamicLoader'
 import JobDetails from './components/JobDetails/JobDetails'
+import AppliedCart from './components/AppliedCart/AppliedCart'
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
         path: "/:jobId",
         element: <JobDetails></JobDetails>,
         loader: ({params}) =>dynamicLoadData(`${params.jobId}`)
+      },
+      {
+        path: "applied",
+        element: <AppliedCart></AppliedCart>
       }
     ]    
   },

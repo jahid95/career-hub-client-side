@@ -6,8 +6,27 @@ import {
 
 const JobDetails = () => {
     const dataJobs = useLoaderData();
-    const {experienceNeeded,salaryRange,jobCategory,contactNumber,companyEmail,location} = dataJobs;
+    const {experienceNeeded,salaryRange,jobCategory,contactNumber,companyEmail,location,id} = dataJobs;
     console.log(dataJobs);
+    
+    const handleAddToCart = id =>{
+        let jobCart = {}
+
+        const storedCart = localStorage.getItem('job-cart');
+        if(storedCart){
+            jobCart = JSON.parse(storedCart);
+        }
+        const quantity = jobCart[id];
+        if(quantity){
+            const newQuantity = quantity + 1;
+            jobCart[id] = newQuantity;
+        }
+        else{
+            jobCart[id] = 1;
+        }
+        localStorage.setItem('job-cart', JSON.stringify(jobCart));
+    }
+
     return (
         <div>
 
@@ -30,7 +49,7 @@ const JobDetails = () => {
                     <p className='flex gap-2 items-center'><EnvelopeIcon className='w-6'></EnvelopeIcon><span className='font-bold py-2'>Email:</span> {companyEmail}</p>
                     <p className='flex gap-2 items-center'><MapPinIcon className='w-6'></MapPinIcon><span className='font-bold py-2'>Location:</span> {location}</p>
                    <div className='text-center'>
-                   <button className='btn-start-applying mt-6 text-center'>Apply Now</button>
+                   <button onClick={()=> handleAddToCart(id)} className='btn-start-applying mt-6 text-center'>Apply Now</button>
                    </div>
                 </div>
                 
