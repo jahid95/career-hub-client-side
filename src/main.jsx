@@ -8,6 +8,8 @@ import {
 } from 'react-router-dom'
 import Home from './components/Home/Home'
 import Statistics from './components/Statistics/Statistics'
+import { dynamicLoadData } from './utilities/DynamicLoader'
+import JobDetails from './components/JobDetails/JobDetails'
 
 const router = createBrowserRouter([
   {
@@ -20,9 +22,15 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         loader: ()=> fetch('category.json')
       },
+    
       {
         path: "statistics",
         element:<Statistics></Statistics>
+      },
+      {
+        path: "statistics/:jobId",
+        element: <JobDetails></JobDetails>,
+        loader: ({params}) =>dynamicLoadData(`${params.jobId}`)
       }
     ]    
   },
