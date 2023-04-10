@@ -13,7 +13,7 @@ const Home = () => {
     console.log(catagories);
     return (
         <div>
-            <div className='flex justify-between mt-10'>
+            <div className='md:flex justify-between mt-10'>
                 <div className='text-left'>
                     <h1 className='text-5xl text-left font-bold my-4 mt-8'>One Step <br /> Closer To Your <br /> <span className='text-blue-600'>Dream Job</span></h1>
                     <p className='w-96 my-6'>Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
@@ -33,12 +33,12 @@ const Home = () => {
                     <p className='text-gray-500 my-4'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 </div>
 
-                <div className='grid grid-cols-4 gap-10'>
+                <div className='md:grid md:grid-cols-4 gap-10'>
                    {
                     catagories.map((category, i) => <Catagories key={i} category={category}></Catagories>)
                    }
                 </div>
-                <div className='grid grid-cols-2 my-20 text-left'>
+                <div className='md:grid md:grid-cols-2 my-20 text-left'>
                     {
                         data.map(feature => <Features feature={feature} key={feature.id}></Features>)
                     }

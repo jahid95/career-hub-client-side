@@ -55,7 +55,7 @@ const Statistics = () => {
 ];
     return (
         <div className='text-center w-[80%] mx-auto'>
-            <h2 className='text-xl font-bold bg-blue-50 h-46 p-8 my-8'>Assignment Mark: {data.length}</h2>
+            <h2 className='text-xl font-bold bg-blue-50 h-46 p-8 my-8'>Assignment Quantity: {data.length}</h2>
          
             <ComposedChart
           width={800}

@@ -11,6 +11,7 @@ import Statistics from './components/Statistics/Statistics'
 import { dynamicLoadData } from './utilities/DynamicLoader'
 import JobDetails from './components/JobDetails/JobDetails'
 import AppliedCart from './components/AppliedCart/AppliedCart'
+import Blogs from './components/Blogs/Blogs'
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "applied",
         element: <AppliedCart></AppliedCart>
+      },
+      {
+        path: 'blogs',
+        element: <Blogs></Blogs>
       }
     ]    
   },
