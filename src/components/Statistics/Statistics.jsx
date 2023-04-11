@@ -16,40 +16,48 @@ const Statistics = () => {
     const data = [
   {
     name: 'A-01',
-    mark: 60
+    mark: 60,
+    result: 60
   
   },
   {
     name: 'A-02',
-    mark: 60
+    mark: 60,
+    result: 60
     
   },
   {
     name: 'A-03',
-    mark: 60
+    mark: 60,
+    result: 60
     
   },
   {
     name: 'A-04',
-    mark: 59  
+    mark: 60,
+    result: 59
   },  
   {
     name: 'A-05',
-    mark: 58    
+    mark: 60,
+    result: 58   
   },
   {
     name: 'A-06',
-    mark: 60
+    mark: 60,
+    result: 60
     
   },
   {
     name: 'A-07',
-    mark: 60
+    mark: 60,
+    result: 60
     
   },
   {
     name: 'A-08',
-    mark: 60
+    mark: 60,
+    result: 60
     
   },
 ];
@@ -75,7 +83,7 @@ const Statistics = () => {
           <Tooltip />
           <Legend />
           <Bar dataKey="mark" barSize={20} fill="#413ea0" />
-          <Line type="monotone" dataKey="mark" stroke="#ff7300" />
+          <Line type="monotone" dataKey="result" stroke="#ff7300" />
         </ComposedChart>
            </div>
         </div>
