@@ -12,11 +12,13 @@ import { dynamicLoadData } from './utilities/DynamicLoader'
 import JobDetails from './components/JobDetails/JobDetails'
 import AppliedCart from './components/AppliedCart/AppliedCart'
 import Blogs from './components/Blogs/Blogs'
+import ErrorPage from './components/ErrorPage/ErrorPage'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <ErrorPage />,
     loader: ()=> fetch('jobs.json'),
     children: [
       {
@@ -41,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: 'blogs',
         element: <Blogs></Blogs>
+      },
+      {
+        path:"*",
+        element: <ErrorPage></ErrorPage>
       }
     ]    
   },

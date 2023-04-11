@@ -7,10 +7,13 @@ import { Link } from 'react-router-dom';
 
 const Cart = ({ ct }) => {
     return (
-        <div className='flex items-center justify-between'>
-            <div className='m-10 flex items-center'>
+        <div>
+           
+            <div className='md:flex md:items-center justify-between'>
+            
+            <div className='md:m-10 md:flex md:items-center m-4'>
                 <img className='w-[220px] h-[160px] bg-gray-200 p-8 rounded-md' src={ct.companyLogo} alt="" />
-                <div className='text-left ml-6'>
+                <div className='text-left md:ml-6'>
                 <p className='text-xl font-semibold'>{ct.jobCategory}</p>
                 <p className='text-lg font-semibold text-gray-400'>{ct.companyName}</p>
                 <div>
@@ -26,6 +29,7 @@ const Cart = ({ ct }) => {
             <div>
                 <Link to={`/${ct.id}`}><button className='bg-blue-600 text-white hover:bg-orange-600 px-6 py-2 rounded-md'>View Details</button></Link>
             </div>
+        </div>
         </div>
     );
 };

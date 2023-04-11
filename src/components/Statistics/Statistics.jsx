@@ -54,11 +54,12 @@ const Statistics = () => {
   },
 ];
     return (
-        <div className='text-center w-[80%] mx-auto'>
-            <h2 className='text-xl font-bold bg-blue-50 h-46 p-8 my-8'>Assignment Quantity: {data.length}</h2>
+        <div className='text-center w-[80%] md:mx-auto'>
+            <h2 className='text-xl font-bold bg-blue-50 h-46 p-8 my-8'>Assignment Mark: {data.length}</h2>
          
-            <ComposedChart
-          width={800}
+           <div className='w-[50%]'>
+           <ComposedChart
+          width={700}
           height={450}
           data={data}
           margin={{
@@ -76,6 +77,7 @@ const Statistics = () => {
           <Bar dataKey="mark" barSize={20} fill="#413ea0" />
           <Line type="monotone" dataKey="mark" stroke="#ff7300" />
         </ComposedChart>
+           </div>
         </div>
     );
 };

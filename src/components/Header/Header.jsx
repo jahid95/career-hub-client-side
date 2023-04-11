@@ -105,7 +105,7 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to='/books'
+                        to='/statistics'
                         className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
                       >
                        Statistics
@@ -113,7 +113,7 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to='/about'
+                        to='/applied'
                         className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
                       >
                         Applied Job
