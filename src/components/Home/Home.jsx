@@ -22,7 +22,7 @@ const Home = () => {
                     </button>
                 </div>
                 <div>
-                    <img src="../../../public/anwar_jahid__2_-removebg-preview.png" alt="" />
+                    <img src="https://scontent.fdac1-1.fna.fbcdn.net/v/t39.30808-6/340894943_448922297431387_2878553565144460630_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHfT5mzrWXYzOIBv_RnOh7K6SFUWMMBLgLpIVRYwwEuAuEhaw6lXFT1s8ZDu2Vr1Xbc5rVYeVd8p7cXcvKTpPla&_nc_ohc=7v9QJMoeBcsAX-qrzwz&_nc_zt=23&_nc_ht=scontent.fdac1-1.fna&oh=00_AfCTcpjq8DvFxBzswnKq0TRwo3JUb5DBB5oET10SQutb5w&oe=6439CF10" alt="" />
                 </div>
             </div>
 
