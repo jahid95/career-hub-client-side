@@ -3,7 +3,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <div className='footer bg-black text-white p-4 mt-8 h-[590px] text-left bg-opacity-90 rounded-lg'>
+        <div className='footer bg-black text-white p-4 mt-8 md:h-[590px] text-left bg-opacity-90 rounded-lg'>
             <div className='md:flex justify-between p-10 mt-8 space-y-2'>
                 <div>
                     <p className='text-2xl font-bold py-4 text-white'>JobHunt</p>
