@@ -25,6 +25,6 @@ _{Setup all initial data create all components for this site. added data and jav
 
 ## Live website link
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_https://creative-bubblegum-243c77.netlify.app/applied_
 
 Copyright (c) _11.04.2023_ _anwar jahid_
