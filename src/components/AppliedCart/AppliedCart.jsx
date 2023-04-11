@@ -28,17 +28,23 @@ const AppliedCart = () => {
     
     
 
-    const handleRemoteJob = () =>{  
-        
+    const handleRemoteJob = () =>{   
+        setTimeout(function() {
+            location.reload();
+          }, 1500);        
         const remoteJob = cart.filter(ct=> ct.remote == true);           
         setCart(remoteJob)
         
     }
+    
 
    
     
-    const handleSiteJob =()=>{
-        
+    const handleSiteJob =()=>{   
+        setTimeout(function() {
+            location.reload();
+          }, 1500); 
+            
         const siteJob = cart.filter(ct=> ct.remote == false);
         setCart(siteJob)
        
